@@ -4,6 +4,7 @@ body {
     justify-content: center;
     background-color: rgb(60, 66, 70);
     overflow-x: hidden;
+    width: 100vw;
 }
 
 #display {
