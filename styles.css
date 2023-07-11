@@ -4,12 +4,17 @@ body {
     justify-content: center;
     background-color: rgb(60, 66, 70);
     overflow-x: hidden;
-    width: 100vw;
+
 }
 
-#display {
+#display {    
     text-align: center;
     margin-top: 3vh;
+    margin-bottom: 5vh
+}
+
+nav {
+    width: 100vw;
 }
 
 footer {
@@ -18,4 +23,15 @@ footer {
     padding-bottom: 1vh;
     background-color: black;
     color: white;
+    width: 100vw;
+}
+
+.cart {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: larger
+}
+
+.add-cart {
+    margin-top: 2rem;
 }
