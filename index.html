@@ -13,13 +13,80 @@
 </head>
 
 <body>
+    <!-- Modal -->
+    <div class="modal fade" id="cartModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Your Cart</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--   ! Table  -->
+
+                    <table class="table" id="cartTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartBody">
+                        </tbody>
+
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+
+
+                        <tr>
+                            <th scope="row">Subtotal:</th>
+                            <td id="subtotalCost">$0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tax:</th>
+                            <td id="taxCost">$0.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shipping:</th>
+                            <td id="shipCost">$0.00</td>
+                        </tr class="success">
+                        <tr>
+                            <th scope="Total">Total:</th>
+                            <td id="totalCost">$0.00</td>
+                        </tr>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+
+
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-danger" id="clearCart">Clear
+                        Cart</button>
+                    <button type="button" class="btn btn-outline-success" id="purchaseBtn">Purchase</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- create a modal window for a shopping cart -->
+    <div>
+
+    </div>
+
     <!--NavBar-->
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <h2>The Store</h2>
             </a>
-            <button type="button" class="btn btn-primary cart">Cart</button>
+            <button id="showCart" type="button" class="btn btn-primary " data-bs-toggle="modal"
+                data-bs-target="#cartModal">Cart</button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item" id="electronics">
@@ -201,7 +268,7 @@
 
     <!-- Table -->
 
-    <!-- Modal -->
+
 
     <!-- Footer -->
     <footer class="footer fixed-bottom">
